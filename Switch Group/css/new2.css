@@ -1,0 +1,292 @@
+body{
+	width: 100%;
+	height: 100%;
+	margin-left: 1px;
+    margin-right: 50px;
+	overflow-x: hidden;
+
+}
+a:focus,hover,active,visted{
+	text-decoration: none;
+}
+.headbar{
+	margin-bottom: 0px;
+    height: 63px;
+    color: #131313;
+}
+.nav>li>a:hover {
+    text-decoration: none;
+     background-color: transparent; 
+}
+.active {
+	background-color: #fdce25;
+	font-size: 18px;
+}
+.logo{
+	margin-top: -7px;
+}
+.search{
+	width: 458px;
+	margin-top: 12px;
+}
+.inp{
+	width: 339px;
+}
+/*.banner{
+	height: 130px;
+    width: 700px;
+    float: right;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}*/
+.to{
+	padding-left: 140px;
+	margin-left: 110px;
+    padding-top: 27px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 0px;
+    height: 47px;
+}
+.ua{
+	height: 38px;
+    margin-top: 10px;
+}
+.topnav{
+	margin-left: 173px;
+    padding-left: 15px;
+    width: 932px;
+}
+.topnav1{
+	margin-left: 1px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 4px;
+}
+.topnav1 ul{
+	    margin-left: 152px;
+}
+.topnav1 ul li a{
+	
+    padding: 10px 15px;
+    color: #131313;
+}
+
+.topic{
+	margin-left: 142px;
+    margin-right: 100px;
+}
+.totop{
+	    margin-bottom: 5px;
+}
+
+.foru{
+	margin: 0 150px;
+    width: 946px;
+    height: 100%;
+    border-bottom: 0px solid;
+}
+.user{
+	border-radius: 50%;
+}
+.uimg{
+	margin:0 330px;
+}
+.userim{
+	width: 30px;
+    height: 27px;
+}
+hr{
+	margin-top: 0px;
+    margin-bottom: 10px;
+    
+}
+.container-flude hr{
+	margin-right: 11px;
+    width: 894px;
+}
+.h4, h4 {
+    font-size: 16px;
+}
+
+/*categories color*/
+.dropdown-menu li .hc{
+	color: #BA5401;
+}
+.dropdown-menu>li>.hc:focus, .dropdown-menu>li>.hc:hover {
+    color: #BA5401;
+}
+.dropdown-menu li .js{
+	color: #DC2E17;
+}
+.dropdown-menu>li>.js:focus, .dropdown-menu>li>.hc:hover {
+    color: #DC2E17;
+}
+.dropdown-menu li .ph{
+	color: #B77501;
+}
+.dropdown-menu>li>.ph:focus, .dropdown-menu>li>.hc:hover {
+    color: #B77501;
+}
+.dropdown-menu li .mt{
+	color: #92278F;
+}
+.dropdown-menu>li>.mt:focus, .dropdown-menu>li>.hc:hover {
+    color: #92278F;
+}
+.dropdown-menu li .db{
+	color: #890808;
+}
+.dropdown-menu>li>.db:focus, .dropdown-menu>li>.hc:hover {
+    color: #890808;
+}
+.dropdown-menu li .pe{
+	color: #595986;
+}
+.dropdown-menu>li>.pe:focus, .dropdown-menu>li>.hc:hover {
+    color: #595986;
+}
+.dropdown-menu li .rb{
+	color: #D3a604;
+}
+.dropdown-menu>li>.rb:focus, .dropdown-menu>li>.hc:hover {
+    color: #D3a604;
+}
+.dropdown-menu li .de{
+	color: #808281;
+}
+.dropdown-menu>li>.de:focus, .dropdown-menu>li>.hc:hover {
+    color: #808281;
+}
+.dropdown-menu li .mk{
+	color: #ED2078;
+}
+.dropdown-menu>li>.mk:focus, .dropdown-menu>li>.hc:hover {
+    color: #ED2078;
+}
+.dropdown-menu li .jb{
+	color: #757575;
+}
+.dropdown-menu>li>.jb:focus, .dropdown-menu>li>.hc:hover {
+    color: #757575;
+}
+
+/*Category*/
+
+.cat{
+    margin-right: 14px;
+    margin-left: 159px;
+    width: 921px;
+    padding-left: 20px;
+}
+.cat1{
+    padding-left: 31px;
+}
+.lat{
+    padding-left: 50px;
+}
+.p p{
+    width: 334px;
+}
+li {
+    list-style: none;
+}
+li a.hc{
+    font-size: 18px;
+    text-decoration: none;
+    color:#BA5401; 
+}
+li a.js{
+    font-size: 18px;
+    text-decoration: none;
+    color:#DC2E17; 
+}
+li a.ph{
+    font-size: 18px;
+    text-decoration: none;
+    color:#B77501; 
+}
+li a.rb{
+    font-size: 18px;
+    text-decoration: none;
+    color:#D3a604; 
+}
+li a.de{
+    font-size: 18px;
+    text-decoration: none;
+    color:#808281; 
+}
+li a.mt{
+    font-size: 18px;
+    text-decoration: none;
+    /*color:#808281;*/ 
+}
+li a.pe{
+    font-size: 18px;
+    text-decoration: none;
+    /*color:#808281;*/ 
+}
+li a.db{
+    font-size: 18px;
+    text-decoration: none;
+    /*color:#808281;*/ 
+}
+li a.mk{
+    font-size: 18px;
+    text-decoration: none;
+    color:#ED2078; 
+}
+li a.jb{
+    font-size: 18px;
+    text-decoration: none;
+    /*color:#ED2078; */
+}
+
+
+
+
+/*Catjava*/
+
+.js{
+    margin-left: 1px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 4px;
+}
+.js ul{
+        margin-left: 152px;
+}
+.js ul li a{
+    
+    padding: 10px 15px;
+    color: #131313;
+}
+
+.js{
+
+    color: #DC2E17
+}
+.fa-clock-o{
+    overflow:hidden;
+    transition-duration: :0.padding-left: 23px;s;
+    transition-property: transform;    
+}
+
+.fa-clock-o:hover{
+    transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+
+}
+.sw{
+        padding-right: 0px;
+    width: 56px;
+    padding-left: 7px;
+
+}
+
+
+
+/*user*/
+.actimg{
+    padding-left: 24px;
+}
