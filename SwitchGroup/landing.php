@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php 
+	$error = false;
+	if ($error = false) {
+		echo '<div id="content">some text</div>';
+	}else{
+
+	}
+?>
+
+
+
+<<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -7,7 +18,9 @@
 	<link rel="stylesheet" type="text/css" href="css/new2.css">
 </head>
 <body>
-<div class="container-fluid">
+<div id="wrapper">
+<div id="menu">
+	<div class="container-fluid">
 	<nav class="navbar navbar-inverse headbar " role="navigation">
 		<div class="container-fluid topnav ">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -18,39 +31,16 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="SwitchGroup/new2.php">
 				<span class=""><img src="img/FORUM (21).png" class="logo"></span></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 
-			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span><i class="fa fa-bars"></i></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="category.html">Categories</a></li>
-							<li class="divider"></li>
-							<li ><a href="catjava.html" class="js">JavaScript</a></li>
-							<li ><a href="#" class="hc">HTML&CSS</a></li>
-							<li ><a href="#" class="ph">PHP</a></li>
-							<li ><a href="#" class="mt">Mata</a></li>
-							<li ><a href="#" class="db">Database</a></li>
-							<li ><a href="#" class="pe">Perl</a></li>
-							<li ><a href="#" class="rb">Ruby</a></li>
-							<li ><a href="#" class="de">Design</a></li>
-							<li ><a href="#" class="mk">Marketing</a></li>
-							<li><a href="#" class="jb">Jobs</a></li>
-							<li class="divider"></li>
-							<li><a href="#">About Us</a></li>
-						</ul>
-					</li>
-				</ul>
-
-				<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right">
 					
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+						<li><a href="login.html"><span><i class="fa fa-plus" aria-hidden="true"></i></span>New Topic</a></li>
 	      				<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 					</ul>
 				</li>
@@ -78,18 +68,17 @@
 		</div>
 		<div>
 			<div class="navbar">
-				<div class="container-fluid js">
+				<div class="container-fluid topnav1">
 						
 					<ul class="nav navbar-nav center">
-						<li>
-							<a class="" href="new2.html">Latest</a>
+
+						<li class="active">
+							<a class="" href="">Latest</a>
 						</li>
 						<li>
 							<a href="category.html">Categories</a>
 						</li>
-						<li class="active">
-							<a href="#">JavaScript</a>
-						</li>
+						
 					</ul>
 				</div>
 			</div>
@@ -117,7 +106,7 @@
 				<div class="m6">
 					<div class="col-sm-6">
 						<span>
-							<a href="catjava1.html"><h4>Live search using Ajax isn’t working on Plunker!</h4></a>
+							<a href="new21.html"><h4>I need a developer</h4></a>
 						</span>
 					</div>
 					<div class="col-sm-6">
@@ -125,7 +114,7 @@
 							<img src="img/dami.jpg" class="img-circle userim" alt="Image">
 						</span>
 						<span class="pull-right">
-							<h5>8m</h5>
+							<h5>3h</h5>
 						</span>
 					</div>
 				</div>
@@ -137,26 +126,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Pass a parameter from client-side to server side and get result</h4>
-					</span>
-				</div>
-				<div class="col-sm-6">
-					<span class="uimg">
-						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
-							</span>
-					<span class="pull-right">
-						<h5>30m</h5>
-					</span>
-				</div>
-				<hr>
-			</div>
-		</div>
-
-		<div class="col-xs-6 col-sm-12 foru">
-			<div class="container-flude">
-				<div class="col-sm-6">
-					<span>
-						<h4>Javascript latest or not, new and old?</h4>
+						<h4>Who can build a site like OLX or Jiji..?Urgent!</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -175,26 +145,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Ajax file upload not being store in the directory</h4>
-					</span>
-				</div>
-				<div class="col-sm-6">
-					<span class="uimg">
-						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
-							</span>
-					<span class="pull-right">
-						<h5>1h</h5>
-					</span>
-				</div>
-				<hr>
-			</div>
-		</div>
-
-		<div class="col-xs-6 col-sm-12 foru">
-			<div class="container-flude">
-				<div class="col-sm-6">
-					<span>
-						<h4>Functional Programming and more</h4>
+						<h4>What is difference between Branding and promotion?</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -213,7 +164,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Application/JSON+ becomes Application/JSON&#43;</h4>
+						<h4>Your Best Recommended Php 7 Tutorials For Complete Beginners</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -221,7 +172,7 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>2d</h5>
+						<h5>3h</h5>
 					</span>
 				</div>
 				<hr>
@@ -232,7 +183,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Javascript getAttribute not working?</h4>
+						<h4>How to store user input html form into hsqldb by using java</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -240,7 +191,7 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>5d</h5>
+						<h5>3h</h5>
 					</span>
 				</div>
 				<hr>
@@ -251,7 +202,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Can I add “add table row” to this jquery row drag, drop and delete?</h4>
+						<h4>How to create a submit button that will disable in previous page after the submit button in current page is submitted?</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -259,7 +210,7 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>7d</h5>
+						<h5>3h</h5>
 					</span>
 				</div>
 				<hr>
@@ -270,7 +221,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Javascript code not running</h4>
+						<h4>Your Best Recommended Php 7 Tutorials For Complete Beginners</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -278,7 +229,7 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>7d</h5>
+						<h5>3h</h5>
 					</span>
 				</div>
 				<hr>
@@ -289,7 +240,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Converting for loop to foreach loop</h4>
+						<h4>Could some please give me some feedback on my website</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -297,7 +248,7 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>8d</h5>
+						<h5>3h</h5>
 					</span>
 				</div>
 				<hr>
@@ -308,7 +259,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Lightbox script: Can’t figure out what I’m getting wrong</h4>
+						<h4>Setting session cookie parameters</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -316,7 +267,7 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>8d</h5>
+						<h5>3h</h5>
 					</span>
 				</div>
 				<hr>
@@ -327,7 +278,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Add array values in jquery each loop</h4>
+						<h4>Php mysql question</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -335,18 +286,66 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>9d</h5>
+						<h5>3h</h5>
 					</span>
 				</div>
 				<hr>
 			</div>
 		</div>
+
+		<div class="col-xs-6 col-sm-12 foru">
+			<div class="container-flude">
+				<div class="col-sm-6">
+					<span>
+						<h4>Mysqli extension for php 5</h4>
+					</span>
+				</div>
+				<div class="col-sm-6">
+					<span class="uimg">
+						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
+							</span>
+					<span class="pull-right">
+						<h5>3h</h5>
+					</span>
+				</div>
+				<hr>
+			</div>
+		</div>
+
+		<div class="col-xs-6 col-sm-12 foru">
+			<div class="container-flude">
+				<div class="col-sm-6">
+					<span>
+						<h4>Mysql CPU usuage 100%. Updates records</h4>
+					</span>
+				</div>
+				<div class="col-sm-6">
+					<span class="uimg">
+						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
+							</span>
+					<span class="pull-right">
+						<h5>3h</h5>
+					</span>
+				</div>
+				<hr>
+			</div>
+		</div>
+
+			<div id="userbar">
+<?php
+		if($_SESSION['signed_in'])
+		{
+			echo 'Hello <b>' . htmlentities($_SESSION['user_name']) . '</b>. Not you? <a class="item" href="signout.php">Sign out</a>';
+		}
+		else
+		{
+			echo '<a class="item" href="signin.php">Sign in</a> or <a class="item" href="signup.php">create an account</a>';
+		}
+		?>
+</div>
+		</div>
+			<div id="content">
 
 		
-</div>
-<script src="Bootstraps/js/jquery-3.1.1.min.js"></script>
 
-	<script src="Bootstraps/js/bootstrap.min.js"></script>
-	<script src="js/buger.js"></script>
-</body>
-</html>
+	

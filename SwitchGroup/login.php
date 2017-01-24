@@ -1,3 +1,93 @@
+<?php
+//for sign up 
+
+require ('config.php');
+if (isset($_POST['submit'])) {
+	$Fname=$_POST['fname'];
+	$Lname=$_POST['lname'];
+	$Email=$_POST['email'];
+	$Password=$_POST['password'];
+	$Password2=$_POST['pass_check'];
+
+	if ($Password == $Password2) {
+		$Fname=mysql_escape_string($Fname);
+		$Lname=mysql_escape_string($Lname);
+		$Email=mysql_escape_string($Email);
+		$Password=mysql_escape_string($Password);
+		$Password2=mysql_escape_string($Password2);
+
+		$sql = mysql_query("INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`) VALUES (NULL , '$Fname', '$Lname', '$Email', '$Password')");
+		if ($sql) {
+			echo "<script> alert('$Fname You've successfully registerd to Switch Forum)
+			 </script>";
+			echo $Fname."Thank you for registering on switch forum You can now login";
+		}else{
+			echo mysql_error();
+		} //end of sql
+
+	} //end of checking password n confirm ppassword
+}//end of clicking submit button
+
+
+// }
+
+//for login
+if (isset($_POST['submit1'])) {
+	$Email=mysql_real_escape_string($_POST['email']);
+	$Password=mysql_real_escape_string($_POST['password']);
+
+	
+
+$sql= mysql_query("SELECT * FROM `users` WHERE email = '$Email' AND password = '$Password'");
+
+if ($sql) {
+	echo"selected";
+}
+else{
+	echo mysql_error();
+}
+		if (mysql_num_rows($sql) > 0) {
+
+			echo 'i am good';
+
+
+			header("location:userpage.php");
+		}
+
+		else{
+  			echo 'your Email and Password is invalid';
+		}
+
+}
+	//form validation
+//define variable set to empty
+	$fnameErr = $lnameErr = $emailErr =""; 
+	$fname = $lname = $email = "";
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	if (empty($_POST['fname'])) {
+		$fnameErr = "First name is required";
+	}else{
+		$fname = mysql_escape_string($_POST['fname']);
+	}
+	if (empty($_POST['lname'])) {
+		$lnameErr = "Last name is required";
+	}else{
+		$lname = mysql_escape_string($_POST['lname']);
+	}
+	if (empty($_POST['$email'])) {
+		$emailErr = "Email is required";
+	}else{
+		$email = mysql_escape_string($_POST['email']);
+	}
+	//check if email is well formed
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		$emailErr = "invalid email format";
+	}
+	
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +106,7 @@
                 	
                     <div class="row ">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1>Switch Group</h1>
+                            <img src="img/EDMAN (2).png">
                             <div class="description">
                             	<p>
 	                            	A Meeting or Medium where ideas and view on a particular issue can be exchanged.
@@ -33,22 +123,26 @@
 	                        		<div class="form-top-left">
 	                        			<h3>Login to our site</h3>
 	                            		<p>Enter username and password to log on:</p>
-	                        		</div>
+	                          		</div>
 	                        		<div class="form-top-right">
 	                        			<i class="fa fa-key"></i>
 	                        		</div>
 	                            </div>
 	                            <div class="form-bottom">
-				                    <form role="form" action="" method="" class="login-form">
+	                            	
+				                    <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="login-form">
 				                    	<div class="form-group">
-				                    		<label class="sr-only" for="form-username">Username</label>
-				                        	<input type="text" name="" placeholder="Username..." class="form-username form-control" id="">
+				                    		<label class="sr-only" for="form-username">Email</label>
+				                        	<input type="email" name="email" placeholder="Email..." class="form-username form-control" id="">
+				                        	<span class="error">*<?php echo $emailErr; ?></span>
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-password">Password</label>
-				                        	<input type="password" name="" placeholder="Password..." class="form-password form-control" id="">
+				                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="">
 				                        </div>
-				                        <a href="new2.html"><button type="button" class="btn">Sign in!</button></a>
+
+
+				                        <button type="submit" VALUE="LOGIN" name="submit1" class="btn">Login</button>
 				                    </form>
 			                    </div>
 		                    </div>
@@ -86,28 +180,32 @@
 	                        		</div>
 	                            </div>
 	                            <div class="form-bottom">
-				                    <form role="form" action="" method="" class="registration-form">
+	                            <p><span class="error">*required field.</span></p>
+				                    <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="registration-form">
 				                    	<div class="form-group">
 				                    		<label class="sr-only" for="form-first-name">First name</label>
-				                        	<input type="text" name="" placeholder="First name..." class="form-first-name form-control" id="">
+				                        	<input type="text" name="fname" placeholder="First name..." class="form-first-name form-control" id="">
+				                        	<span class="error">*<?php echo $fnameErr; ?></span>
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-last-name">Last name</label>
-				                        	<input type="text" name="" placeholder="Last name..." class="form-last-name form-control" id="">
+				                        	<input type="text" name="lname" placeholder="Last name..." class="form-last-name form-control" id="">
+				                        	<span class="error">*<?php echo $lnameErr; ?></span>
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-email">Email</label>
-				                        	<input type="text" name="" placeholder="Email..." class="form-email form-control" id="">
+				                        	<input type="text" name="email" placeholder="Email..." class="form-email form-control" id="">
+				                        	<span class="error">*<?php echo $emailErr; ?></span>
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-password">Password</label>
-				                        	<input type="password" name="" placeholder="Password..." class="form-password form-control" id="">
+				                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="">
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-password">Confirm Password</label>
-				                        	<input type="password" name="" placeholder="Confirm Password..." class="form-password form-control" id="">
+				                        	<input type="password" name="pass_check" placeholder="Confirm Password..." class="form-password form-control" id="">
 				                        </div>
-				                        <button type="submit" class="btn">Sign me up!</button>
+				                        <button type="submit" name="submit" class="btn">Sign me up!</button>
 				                    </form>
 			                    </div>
                         	</div>

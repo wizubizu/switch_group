@@ -26,33 +26,13 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span><i class="fa fa-bars"></i></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="category.html">Categories</a></li>
-							<li class="divider"></li>
-							<li ><a href="catjava.html" class="js">JavaScript</a></li>
-							<li ><a href="#" class="hc">HTML&CSS</a></li>
-							<li ><a href="#" class="ph">PHP</a></li>
-							<li ><a href="#" class="mt">Mata</a></li>
-							<li ><a href="#" class="db">Database</a></li>
-							<li ><a href="#" class="pe">Perl</a></li>
-							<li ><a href="#" class="rb">Ruby</a></li>
-							<li ><a href="#" class="de">Design</a></li>
-							<li ><a href="#" class="mk">Marketing</a></li>
-							<li><a href="#" class="jb">Jobs</a></li>
-							<li class="divider"></li>
-							<li><a href="#">About Us</a></li>
-						</ul>
-					</li>
-				</ul>
+				
 
 				<ul class="nav navbar-nav navbar-right">
 					
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-	      				<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						<li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+	      				<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 					</ul>
 				</li>
 				
@@ -73,20 +53,17 @@
 	</nav>
 
 	<div class="container-fluid">
-		<div>
-			<img src="">
-			
-		</div>
+		
 		<div>
 			<div class="navbar">
 				<div class="container-fluid js">
 						
 					<ul class="nav navbar-nav center">
 						<li>
-							<a class="" href="new2.html">Latest</a>
+							<a class="" href="new2.php">Latest</a>
 						</li>
 						<li>
-							<a href="category.html">Categories</a>
+							<a href="category.php">Categories</a>
 						</li>
 						<!-- <li class="active">
 							<a href="#">JavaScript</a>
@@ -156,10 +133,8 @@
 				<hr>
 				<div>
 
-				
-					
 				</div>
-			</div
+			</div>
 </div>
 <script src="Bootstraps/js/jquery-3.1.1.min.js"></script>
 

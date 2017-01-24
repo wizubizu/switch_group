@@ -7,94 +7,104 @@
 	<link rel="stylesheet" type="text/css" href="css/new2.css">
 </head>
 <body>
-	<div class="container-fluid">
-		<nav class="navbar navbar-inverse headbar " role="navigation">
-			<div class="container-fluid topnav ">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">
-					<span class=""><img src="img/FORUM (21).png" class="logo"></span></a>
-				</div>
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-
-				<div class="collapse navbar-collapse navbar-ex1-collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span><i class="fa fa-bars"></i></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Categories</a></li>
-								<li class="divider"></li>
-								<li ><a href="catjava.html" class="js">JavaScript</a></li>
-								<li ><a href="#" class="hc">HTML&CSS</a></li>
-								<li ><a href="#" class="ph">PHP</a></li>
-								<li ><a href="#" class="mt">Mata</a></li>
-								<li ><a href="#" class="db">Database</a></li>
-								<li ><a href="#" class="pe">Perl</a></li>
-								<li ><a href="#" class="rb">Ruby</a></li>
-								<li ><a href="#" class="de">Design</a></li>
-								<li ><a href="#" class="mk">Marketing</a></li>
-								<li><a href="#" class="jb">Jobs</a></li>
-								<li class="divider"></li>
-								<li><a href="#">About Us</a></li>
-							</ul>
-						</li>
-					</ul>
-
-					<ul class="nav navbar-nav navbar-right">
-						
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-		      				<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-						</ul>
-					</ul>
-					
-					<form class="navbar-form navbar-right search" role="search">
-						<div class="input-group inp">
-							<input type="text" class="form-control" placeholder="Search">
-							<div class="input-group-btn">
-								<button class="btn btn-default" type="submit">
-									<i class="glyphicon glyphicon-search"></i>
-								</button>
-							</div>
-						</div>
-					</form>
-
-					
-				</div><!-- /.navbar-collapse -->
+<div class="container-fluid">
+	<nav class="navbar navbar-inverse headbar " role="navigation">
+		<div class="container-fluid topnav ">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+				<span class=""><img src="img/FORUM (21).png" class="logo"></span></a>
 			</div>
-		</nav>
 
-		<div class="container-fluid">
-			<div>
-				<img src="">
+			<!-- Collect the nav links, forms, and other content for toggling -->
+
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><!-- <span><i class="fa fa-bars"></i></span> --><img src="img/dami.jpg" class="img-responsive img-circle" width="50" height="40" alt="Image"></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="">Damilola</a></li>
+							<li class="divider"></li>
+							<li ><a href="" class=""><span><i class="fa fa-bell" aria-hidden="true"></i></span> Notification</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+
+					
+					
+				</li>
 				
-			</div>
-			<div>
-				<div class="navbar">
-					<div class="container-fluid topnav1">
-							
-						<ul class="nav navbar-nav center">
-							<li class="">
-								<a class="" href="new2.html">Latest</a>
-							</li>
-							<li class="active">
-								<a href="#">Categories</a>
-							</li>
-							
-						</ul>
+				<form class="navbar-form navbar-right search" role="search">
+					<div class="input-group inp">
+						<input type="text" class="form-control" placeholder="Search">
+						<div class="input-group-btn">
+							<button class="btn btn-default" type="submit">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
 					</div>
+				</form>
+
+				
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+
+	
+		<div class="container-fluid">
+		
+		<div>
+			<div class="navbar">
+				<div class="container-fluid topnav1">
+						
+					<ul class="nav navbar-nav center">
+
+						<li >
+							<a class="" href="userpage.php">Latest</a>
+						</li>
+						<li class="active">
+							<a href="userc.php">Categories</a>
+						</li>
+						
+					</ul>
 				</div>
 			</div>
 		</div>
 
-		<div class="container-fluid">
+		<!--  -->
+
+
+		<!-- <a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Reply</a>
+				<div class="modal fade" id="modal-id">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title">Modal title</h4>
+							</div>
+							<div class="modal-body">
+								<textarea name="" id="input" class="form-control" rows="3" required="required"></textarea>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+			<div class="container-fluid">
 			<div class="col-md-12 cat">
 				<div class="row">
 					<div class="col-md-6 cat1">
@@ -109,9 +119,7 @@
 							</span>
 						</div>
 					</div>
-						
-						
-					<div class="col-md-6 lat">
+			<div class="col-md-6 lat">
 						<div class="row">
 							<span>
 							<p>Latest View</p>
@@ -130,7 +138,7 @@
 						<div class="row">
 							<span>
 								<div class="pull-left">
-									<li ><h4><a href="catjava.html" class="js"><b>JavaScript</b></a></h4></li>
+									<li ><h4><a href="usercj.php" class="js"><b>JavaScript</b></a></h4></li>
 
 									<span class="p"><p>The world's most ubiquitous computing runtime, used for everything from client-side scripting to multi-threaded, server-based apps. Learn how to use the language plus the numerous libraries and frameworks that are based upon it.</p></span>	
 
@@ -344,11 +352,12 @@
 		</div>
 
 	</div>
-
 		
+			
 
 	<script src="Bootstraps/js/jquery-3.1.1.min.js"></script>
 
 	<script src="Bootstraps/js/bootstrap.min.js"></script>
+	
 </body>
 </html>

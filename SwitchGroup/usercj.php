@@ -27,32 +27,22 @@
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span><i class="fa fa-bars"></i></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><!-- <span><i class="fa fa-bars"></i></span> --><img src="img/dami.jpg" class="img-responsive img-circle" width="50" height="40" alt="Image"></a>
+
 						<ul class="dropdown-menu">
-							<li><a href="category.html">Categories</a></li>
+							<li><a href="">Damilola</a></li>
 							<li class="divider"></li>
-							<li ><a href="catjava.html" class="js">JavaScript</a></li>
-							<li ><a href="#" class="hc">HTML&CSS</a></li>
-							<li ><a href="#" class="ph">PHP</a></li>
-							<li ><a href="#" class="mt">Mata</a></li>
-							<li ><a href="#" class="db">Database</a></li>
-							<li ><a href="#" class="pe">Perl</a></li>
-							<li ><a href="#" class="rb">Ruby</a></li>
-							<li ><a href="#" class="de">Design</a></li>
-							<li ><a href="#" class="mk">Marketing</a></li>
-							<li><a href="#" class="jb">Jobs</a></li>
+							<li ><a href="" class=""><span><i class="fa fa-bell" aria-hidden="true"></i></span> Notification</a></li>
 							<li class="divider"></li>
-							<li><a href="#">About Us</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
 						</ul>
 					</li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
+
 					
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login.html"><span><i class="fa fa-plus" aria-hidden="true"></i></span>New Topic</a></li>
-	      				<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					</ul>
+					
 				</li>
 				
 				<form class="navbar-form navbar-right search" role="search">
@@ -71,24 +61,25 @@
 		</div>
 	</nav>
 
-	<div class="container-fluid">
-		<div>
-			<img src="">
-			
-		</div>
+	
+		<!--  -->
+
+			<div class="container-fluid">
+		
 		<div>
 			<div class="navbar">
-				<div class="container-fluid topnav1">
+				<div class="container-fluid js">
 						
 					<ul class="nav navbar-nav center">
-
-						<li class="active">
-							<a class="" href="">Latest</a>
+						<li>
+							<a class="" href="userpage.php">Latest</a>
 						</li>
 						<li>
-							<a href="category.html">Categories</a>
+							<a href="userc.php">Categories</a>
 						</li>
-						
+						<li class="active">
+							<a href="#">JavaScript</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -116,7 +107,7 @@
 				<div class="m6">
 					<div class="col-sm-6">
 						<span>
-							<a href="new21.html"><h4>I need a developer</h4></a>
+							<a href="usercj1.php"><h4>Live search using Ajax isn’t working on Plunker!</h4></a>
 						</span>
 					</div>
 					<div class="col-sm-6">
@@ -124,7 +115,7 @@
 							<img src="img/dami.jpg" class="img-circle userim" alt="Image">
 						</span>
 						<span class="pull-right">
-							<h5>3h</h5>
+							<h5>8m</h5>
 						</span>
 					</div>
 				</div>
@@ -136,7 +127,26 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Who can build a site like OLX or Jiji..?Urgent!</h4>
+						<h4>Pass a parameter from client-side to server side and get result</h4>
+					</span>
+				</div>
+				<div class="col-sm-6">
+					<span class="uimg">
+						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
+							</span>
+					<span class="pull-right">
+						<h5>30m</h5>
+					</span>
+				</div>
+				<hr>
+			</div>
+		</div>
+
+		<div class="col-xs-6 col-sm-12 foru">
+			<div class="container-flude">
+				<div class="col-sm-6">
+					<span>
+						<h4>Javascript latest or not, new and old?</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -155,7 +165,26 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>What is difference between Branding and promotion?</h4>
+						<h4>Ajax file upload not being store in the directory</h4>
+					</span>
+				</div>
+				<div class="col-sm-6">
+					<span class="uimg">
+						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
+							</span>
+					<span class="pull-right">
+						<h5>1h</h5>
+					</span>
+				</div>
+				<hr>
+			</div>
+		</div>
+
+		<div class="col-xs-6 col-sm-12 foru">
+			<div class="container-flude">
+				<div class="col-sm-6">
+					<span>
+						<h4>Functional Programming and more</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -174,7 +203,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Your Best Recommended Php 7 Tutorials For Complete Beginners</h4>
+						<h4>Application/JSON+ becomes Application/JSON&#43;</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -182,7 +211,7 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>3h</h5>
+						<h5>2d</h5>
 					</span>
 				</div>
 				<hr>
@@ -193,7 +222,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>How to store user input html form into hsqldb by using java</h4>
+						<h4>Javascript getAttribute not working?</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -201,7 +230,7 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>3h</h5>
+						<h5>5d</h5>
 					</span>
 				</div>
 				<hr>
@@ -212,7 +241,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>How to create a submit button that will disable in previous page after the submit button in current page is submitted?</h4>
+						<h4>Can I add “add table row” to this jquery row drag, drop and delete?</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -220,7 +249,7 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>3h</h5>
+						<h5>7d</h5>
 					</span>
 				</div>
 				<hr>
@@ -231,7 +260,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Your Best Recommended Php 7 Tutorials For Complete Beginners</h4>
+						<h4>Javascript code not running</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -239,7 +268,7 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>3h</h5>
+						<h5>7d</h5>
 					</span>
 				</div>
 				<hr>
@@ -250,7 +279,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Could some please give me some feedback on my website</h4>
+						<h4>Converting for loop to foreach loop</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -258,7 +287,7 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>3h</h5>
+						<h5>8d</h5>
 					</span>
 				</div>
 				<hr>
@@ -269,7 +298,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Setting session cookie parameters</h4>
+						<h4>Lightbox script: Can’t figure out what I’m getting wrong</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -277,7 +306,7 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>3h</h5>
+						<h5>8d</h5>
 					</span>
 				</div>
 				<hr>
@@ -288,7 +317,7 @@
 			<div class="container-flude">
 				<div class="col-sm-6">
 					<span>
-						<h4>Php mysql question</h4>
+						<h4>Add array values in jquery each loop</h4>
 					</span>
 				</div>
 				<div class="col-sm-6">
@@ -296,54 +325,20 @@
 						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
 							</span>
 					<span class="pull-right">
-						<h5>3h</h5>
+						<h5>9d</h5>
 					</span>
 				</div>
 				<hr>
 			</div>
 		</div>
 
-		<div class="col-xs-6 col-sm-12 foru">
-			<div class="container-flude">
-				<div class="col-sm-6">
-					<span>
-						<h4>Mysqli extension for php 5</h4>
-					</span>
-				</div>
-				<div class="col-sm-6">
-					<span class="uimg">
-						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
-							</span>
-					<span class="pull-right">
-						<h5>3h</h5>
-					</span>
-				</div>
-				<hr>
-			</div>
-		</div>
+	</div>
+		
+			
 
-		<div class="col-xs-6 col-sm-12 foru">
-			<div class="container-flude">
-				<div class="col-sm-6">
-					<span>
-						<h4>Mysql CPU usuage 100%. Updates records</h4>
-					</span>
-				</div>
-				<div class="col-sm-6">
-					<span class="uimg">
-						<img src="img/dami.jpg" class="img-circle userim"  alt="Image">
-							</span>
-					<span class="pull-right">
-						<h5>3h</h5>
-					</span>
-				</div>
-				<hr>
-			</div>
-		</div>
-</div>
-<script src="Bootstraps/js/jquery-3.1.1.min.js"></script>
+	<script src="Bootstraps/js/jquery-3.1.1.min.js"></script>
 
 	<script src="Bootstraps/js/bootstrap.min.js"></script>
-	<script src="js/buger.js"></script>
+	
 </body>
 </html>
