@@ -1,37 +1,57 @@
 <?php
-//for sign up 
-
+session_start();
 require ('config.php');
+$sign_in_errror = "";
 if (isset($_POST['submit'])) {
-	$Fname=$_POST['fname'];
-	$Lname=$_POST['lname'];
-	$Email=$_POST['email'];
-	$Password=$_POST['password'];
-	$Password2=$_POST['pass_check'];
+	if (!empty($_POST['fname'])&&!empty($_POST['lname'])&&!empty($_POST['email'])&&!empty($_POST['password'])&&!empty($_POST['pass_check'])) {
+		$Fname=$_POST['fname'];
+		$Lname=$_POST['lname'];
+		$Email=$_POST['email'];
+		$Password=$_POST['password'];
+		$Password2=$_POST['pass_check'];
+			if ($Password == $Password2) {
+				$Fname=mysql_escape_string($Fname);
+				$Lname=mysql_escape_string($Lname);
+				$Email=mysql_escape_string($Email);
+				$Password=mysql_escape_string($Password);
+				$Password2=mysql_escape_string($Password2);
 
-	if ($Password == $Password2) {
-		$Fname=mysql_escape_string($Fname);
-		$Lname=mysql_escape_string($Lname);
-		$Email=mysql_escape_string($Email);
-		$Password=mysql_escape_string($Password);
-		$Password2=mysql_escape_string($Password2);
+				$sql = mysql_query("INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`) VALUES (NULL , '$Fname', '$Lname', '$Email', '$Password')");
+					if ($sql) {
+						echo "<script> alert('$Fname You've successfully registerd to Switch Forum)
+						 </script>";
+						 header("location:userpage.php");
+						echo $Fname."Thank you for registering on switch forum You can now login";
 
-		$sql = mysql_query("INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`) VALUES (NULL , '$Fname', '$Lname', '$Email', '$Password')");
-		if ($sql) {
-			echo "<script> alert('$Fname You've successfully registerd to Switch Forum)
-			 </script>";
-			echo $Fname."Thank you for registering on switch forum You can now login";
+
+						
+
+					}else{
+						echo mysql_error();
+					} //end of sql
+
+				}else{
+					 $sign_in_errror ="Password not match" ;
+					// echo "Password not match";
+			} //end of checking password n confirm ppassword
+			
+
 		}else{
-			echo mysql_error();
-		} //end of sql
+			 $sign_in_errror = "Some field were empty";
+					// echo 'some field are empty';
+		}
+				
 
-	} //end of checking password n confirm ppassword
-}//end of clicking submit button
+	}
+
+
+//end of clicking submit button
 
 
 // }
 
 //for login
+	$log_in_errror = "";
 if (isset($_POST['submit1'])) {
 	$Email=mysql_real_escape_string($_POST['email']);
 	$Password=mysql_real_escape_string($_POST['password']);
@@ -41,7 +61,8 @@ if (isset($_POST['submit1'])) {
 $sql= mysql_query("SELECT * FROM `users` WHERE email = '$Email' AND password = '$Password'");
 
 if ($sql) {
-	echo"selected";
+	// echo"selected";
+
 }
 else{
 	echo mysql_error();
@@ -51,41 +72,34 @@ else{
 			echo 'i am good';
 
 
+			while ($user = mysql_fetch_array($sql)) {
+				$_SESSION['email'] = $user['email'];
+				$_SESSION['id'] = $user['id'];
+				$_SESSION['lastname'] = $user['lastname'];
+
+
+
+				$session_mail = $_SESSION['email'];
+				$session_id = $_SESSION['id'];
+				$session_firstname = $_SESSION['lastname'];
+
+
+			
 			header("location:userpage.php");
+
+				# code...
+			}
+
 		}
 
 		else{
-  			echo 'your Email and Password is invalid';
+			$log_in_errror ='Invalid Email and Password';
+  			// echo 'your Email and Password is invalid';
 		}
+		
 
 }
-	//form validation
-//define variable set to empty
-	$fnameErr = $lnameErr = $emailErr =""; 
-	$fname = $lname = $email = "";
-
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	if (empty($_POST['fname'])) {
-		$fnameErr = "First name is required";
-	}else{
-		$fname = mysql_escape_string($_POST['fname']);
-	}
-	if (empty($_POST['lname'])) {
-		$lnameErr = "Last name is required";
-	}else{
-		$lname = mysql_escape_string($_POST['lname']);
-	}
-	if (empty($_POST['$email'])) {
-		$emailErr = "Email is required";
-	}else{
-		$email = mysql_escape_string($_POST['email']);
-	}
-	//check if email is well formed
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		$emailErr = "invalid email format";
-	}
 	
-	}
 ?>
 
 <!DOCTYPE html>
@@ -122,7 +136,10 @@ else{
 	                        	<div class="form-top">
 	                        		<div class="form-top-left">
 	                        			<h3>Login to our site</h3>
-	                            		<p>Enter username and password to log on:</p>
+	                            		<p>Enter Email and Password:<span style="color: red; font-weight: bold;">
+	                            			<?php echo $log_in_errror; ?> 
+	                            		</span></p>
+	                            		
 	                          		</div>
 	                        		<div class="form-top-right">
 	                        			<i class="fa fa-key"></i>
@@ -130,11 +147,10 @@ else{
 	                            </div>
 	                            <div class="form-bottom">
 	                            	
-				                    <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="login-form">
+				                    <form role="form" action="" method="POST" class="login-form">
 				                    	<div class="form-group">
 				                    		<label class="sr-only" for="form-username">Email</label>
 				                        	<input type="email" name="email" placeholder="Email..." class="form-username form-control" id="">
-				                        	<span class="error">*<?php echo $emailErr; ?></span>
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-password">Password</label>
@@ -173,29 +189,31 @@ else{
                         		<div class="form-top">
 	                        		<div class="form-top-left">
 	                        			<h3>Sign up now</h3>
-	                            		<p>Fill in the form below to get instant access:</p>
-	                        		</div>
+	                            		<p>Fill in the form below to get instant access: <span style="color: red; font-weight: bold;">
+	                            			<?php echo $sign_in_errror; ?> 
+	                            		</span></p>
+	                            			                        		</div>
 	                        		<div class="form-top-right">
 	                        			<i class="fa fa-pencil"></i>
 	                        		</div>
 	                            </div>
 	                            <div class="form-bottom">
-	                            <p><span class="error">*required field.</span></p>
-				                    <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="registration-form">
+	                            
+				                    <form role="form" action="" method="POST" class="">
 				                    	<div class="form-group">
 				                    		<label class="sr-only" for="form-first-name">First name</label>
 				                        	<input type="text" name="fname" placeholder="First name..." class="form-first-name form-control" id="">
-				                        	<span class="error">*<?php echo $fnameErr; ?></span>
+				                        	
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-last-name">Last name</label>
 				                        	<input type="text" name="lname" placeholder="Last name..." class="form-last-name form-control" id="">
-				                        	<span class="error">*<?php echo $lnameErr; ?></span>
+				                        	
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-email">Email</label>
 				                        	<input type="text" name="email" placeholder="Email..." class="form-email form-control" id="">
-				                        	<span class="error">*<?php echo $emailErr; ?></span>
+				                        	
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-password">Password</label>

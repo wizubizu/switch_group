@@ -1,6 +1,6 @@
 <?php  
 	require('config.php');
-	include 'header.php';
+	include 'header1.php';
 	if (isset($_POST['post'])) {
 		$topic= $_POST['topic'];
 		$time_posted = $_POST['time_posted'];
@@ -9,7 +9,7 @@
 		$sql= mysql_query ("INSERT INTO `topic` (`topic_subject`, `time_posted`) VALUES ('$topic', '$time_posted')");
 		if ($sql) {
 			echo "<script> alert('Topic has been posted successfully') </script>";
-			header("location:userpage.php");
+			// header("location:indexn.php");
 		}else{
 			echo mysql_error();
 		}
@@ -17,20 +17,19 @@
 	}
 
 ?>
-
 <div class="container">
 
 	<div class="row">
-		<div class="col-md-12" col-sm-6>
+		<div class="col-md-12 col-sm-6">
 			<div class="navbar">
 				<div class="container-fluid topnav1">
 						
 					<ul class="nav navbar-nav center">
 						<li>
-							<a class="" href="userpage.php">Latest</a>
+							<a class="" href="indexn.php">Latest</a>
 						</li>
 						<li class="active">
-							<a href="userc.php">Categories</a>
+							<a href="noncat.php">Categories</a>
 						</li>
 					</ul>
 				</div>
@@ -58,7 +57,7 @@
 			<div class="col-md-12 col-sm-6">
 				<div class="col-md-6">
 					<div class="col-md-6">
-						<li ><h4><a href="usercj.php" class="js"><b>JavaScript</b></a></h4></li>
+						<li ><h4><a href="noncatj.php" class="js"><b>JavaScript</b></a></h4></li>
 
 						<span class="p"><p>The world's most ubiquitous computing runtime, used for everything from client-side scripting to multi-threaded, server-based apps. Learn how to use the language plus the numerous libraries and frameworks that are based upon it.</p></span>
 					</div>
@@ -235,62 +234,10 @@
 </div>	
 	
 
-
-
-
-
-<!-- modal -->
-		<div class="modal fade" id="modal-topic">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							<h4 class="modal-title">POST A TOPIC</h4>
-					</div>
-					<form action="" method="POST">
-						<div class="modal-body">
-						<input type="text" name="topic" class="form-control" placeholder="Subject"  ><br>
-							<span class="label"></span>
-							<textarea name="body" id="input" class="form-control" rows="20" placeholder="Shhhhh!!! Create your own topic "></textarea>
-							<input type="text" name="time_posted" class="posted_time" VALUE=" <?php  echo date(" d/m/y ha");?> " </div> </input>
-						</div>
-						<div class="modal-footer">
-							<center>
-								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-								<input type="submit" name="post" class="btn btn-default" VALUE="POST"></input>
-							</center>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-			
 		
-</div>			
 
 	<script src="Bootstraps/js/jquery-3.1.1.min.js"></script>
 
 	<script src="Bootstraps/js/bootstrap.min.js"></script>
-	
-		<script type="text/javascript">
-		
-	
-// $('#topic_content').click(function(){
-// alert($(this).attr('href'));
-//  });
-
-		// var each_topic = document.getElementById('topic_content').sometext;
-		// // document.getElementById('user_topics').innerHTML = each_topic;
-
-		// document.getElementById("user_topics").text('user_topics');
-
-$(".topic_content").on('click', function() {
-	var result = $(this).text();
-	
-	$("#user_topics").text("Topic :"+ result) +"<br>";
-});
-
-	</script>
-
 </body>
 </html>

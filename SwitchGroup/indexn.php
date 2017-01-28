@@ -1,17 +1,16 @@
 <?php  
 	require('config.php');
-	include 'header.php';
+	include 'header1.php';
 	if (isset($_POST['post'])) {
 		$topic= $_POST['topic'];
 		$time_posted = $_POST['time_posted'];
 		$body = $_POST['body'];
 
 
-
 		$sql= mysql_query ("INSERT INTO `topic` (`topic_subject`, `time_posted`, `topic_body`) VALUES ('$topic', '$time_posted', '$body')");
 		if ($sql) {
 			echo "<script> alert('Topic has been posted successfully') </script>";
-			header("location:userpage.php");
+			// header("location:indexn.php");
 		}else{
 			echo mysql_error();
 		}
@@ -19,20 +18,19 @@
 	}
 
 ?>
-<div class="container">
-	
 
+<div class="container">
 	<div class="row">
-		<div class="col-md-12 >
+		<div class="col-md-12 col-md-6">
 			<div class="navbar">
 				<div class="container-fluid js">
 						
 					<ul class="nav navbar-nav center">
 						<li>
-							<a class="active" href="userpage.php">Latest</a>
+							<a class="active" href="indexn.php">Latest</a>
 						</li>
 						<li class="">
-							<a href="userc.php">Categories</a>
+							<a href="noncat.php">Categories</a>
 						</li>
 					</ul>
 				</div>
@@ -76,28 +74,24 @@
 							}else{
 							
 
-							while ($row = mysql_fetch_assoc($query)) {
-									$_SESSION['topic_body'] = $row['topic_body'];
+							while ($row = mysql_fetch_assoc($query)) {	
+									// $x= $row['topic_subject'];
+								$_SESSION['topic_body'] = $row['topic_body'];
 								
 									$_SESSION['topic_subject']= $row['topic_subject'];
-									
-
-
-
 						?>
 
 
 		<div class="row userland">
-			<div class="col-md-12">
+			<div class="col-md-12 ">
 				<div class="col-md-8 userlandtopic">
 					<span>
-						<a href="user1.php" class="topic_content" ><h4 class="posted"> <?php echo $row['topic_subject'];   ?> </h4></a>
+						<a href="nonuser.php" class="topic_content" ><h4 class="posted"> <?php echo $row['topic_subject'];   ?> </h4></a>
 					</span>
 				</div>
 				<div class="col-md-3 userlandimg">
 					<span>
 						<div class="glyphicon glyphicon-user userim"></div>
-						<!-- <img src="img/dami.jpg" class="img-circle userim"  alt="Image"> -->
 					</span>
 				</div>
 				<div class="col-md-1 userlandtp">
@@ -117,10 +111,9 @@
 			}
 			}
 		?>
-</div>
 
 
-		<div class="modal fade" id="modal-topic">
+	<!-- 	<div class="modal fade" id="modal-topic">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -129,9 +122,8 @@
 					</div>
 					<form action="" method="POST">
 						<div class="modal-body">
-						<input type="text" name="topic" class="form-control" placeholder="Subject"  ><br>
 							<span class="label"></span>
-							<textarea name="body" id="input" class="form-control" rows="20" placeholder="Shhhhh!!! Create your own topic "></textarea>
+							<textarea name="topic" id="input" class="form-control" rows="3" required="required" placeholder="Shhhhh!!! Create your own topic "></textarea>
 							<input type="text" name="time_posted" class="posted_time" VALUE=" <?php  echo date(" d/m/y ha");?> " </div> </input>
 						</div>
 						<div class="modal-footer">
@@ -144,9 +136,9 @@
 				</div>
 			</div>
 		</div>
+			 -->
 		
-		
-</div>			
+				
 
 	<script src="Bootstraps/js/jquery-3.1.1.min.js"></script>
 
@@ -171,6 +163,3 @@ $(".topic_content").on('click', function() {
 });
 
 	</script>
-
-</body>
-</html>

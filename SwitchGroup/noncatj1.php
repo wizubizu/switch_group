@@ -1,6 +1,6 @@
 <?php  
 	require('config.php');
-	include 'header.php';
+	include 'header1.php';
 	if (isset($_POST['post'])) {
 		$topic= $_POST['topic'];
 		$time_posted = $_POST['time_posted'];
@@ -18,32 +18,18 @@
 
 ?>
 
-<?php  
-	if (isset($_POST['post_comment'])) {
-		$comment=mysql_real_escape_string($_POST['comment']);
-		// $comment_date=mysql_real_escape_string($_POST['comment_date']);
-
-		$sql=mysql_query("INSERT INTO `comment` (`id`, `user_id`, `body` ) VALUES (NULL, 4,'$comment')");
-		if ($sql) {
-			// echo 'Comment successfully sent';
-		}else{
-			echo mysql_error();
-		}
-	}
-?>
-
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
+		<div col-md-12>
 			<div class="navbar">
 				<div class="container-fluid js">
 						
 					<ul class="nav navbar-nav center">
 						<li>
-							<a class="" href="userpage.php">Latest</a>
+							<a class="" href="indexn.php">Latest</a>
 						</li>
 						<li>
-							<a href="userc.php">Categories</a>
+							<a href="noncat.php">Categories</a>
 						</li>
 						<li class="active">
 							<a href="#">JavaScript</a>
@@ -63,8 +49,7 @@
 				</span>
 					<hr>
 				<span>
-					<div class="glyphicon glyphicon-user userim"></div>
-					<!-- <img src="img/dami.jpg" class="img-circle userim" style="width: 60px;height: 59px;"  alt="Image"> --> Toba Akinlade.
+					<div class="glyphicon glyphicon-user userim"></div> Toba Akinlade.
 				</span>
 				<span>
 					<p class="" style="padding-left: 63px;">Hi,
@@ -84,21 +69,20 @@
 					
 				</span>
 					<!-- Comment start -->
-					<div class="row commr">
+					<!-- <div class="row commr">
 						<div class="col-md-12">
 							<form method="POST" action="">
 								<textarea name="comment" id="" class="form-control comm" rows="4" value="" ></textarea>
 								<input type="text" name="comment_date" class="posted_time" value="<?php echo date("d.m.y:ha")?>"><br>
-								<span><input type="submit" name="post_comment" class="btn btn-default commbu" value="Comment"></input></span>
+								<span><input type="submit" name="post_comment" class="btn btn-default commbu"></input></span>
 							</form>
 						</div>
-					</div>
+					</div> -->
 					<!-- comment end -->
 					
 				<hr>
 				<span>
-					<div class="glyphicon glyphicon-userim "></div>
-					<!-- <img src="img/dami.jpg" class="img-circle userim" style="width: 60px;height: 59px;"  alt="Image"> --> Toba Akinlade.
+					<div class="glyphicon glyphicon-user userim"></div> Toba Akinlade.
 				</span>
 				<span>
 					<p class="" style="padding-left: 63px;">Hi,
@@ -116,9 +100,7 @@
 				<hr>
 			<div>
 		</div>
-<div>
-	
-</div>
+
 		<?php
 						$sql  = "SELECT * FROM comment";
 						$query = mysql_query($sql);
@@ -142,8 +124,10 @@
 											} 
 							?>
 							<br> 
-							<button id="view_comment" type="button" class="btn btn-default glyphicon glyphicon-eye-open ">Comments</button> 
-	
+							<button id="view_comment" type="button" class="btn btn-default glyphicon glyphicon-eye-open "> View Comments</button> 
+		
+</div>
+
 
 
 <!-- modal -->
@@ -156,9 +140,8 @@
 					</div>
 					<form action="" method="POST">
 						<div class="modal-body">
-						<input type="text" name="topic" class="form-control" placeholder="Subject"  ><br>
 							<span class="label"></span>
-							<textarea name="body" id="input" class="form-control" rows="20" placeholder="Shhhhh!!! Create your own topic "></textarea>
+							<textarea name="topic" id="input" class="form-control" rows="3" required="required" placeholder="Shhhhh!!! Create your own topic "></textarea>
 							<input type="text" name="time_posted" class="posted_time" VALUE=" <?php  echo date(" d/m/y ha");?> " </div> </input>
 						</div>
 						<div class="modal-footer">
@@ -174,9 +157,6 @@
 			
 		
 </div>			
-</div>
-	
-
 
 	<script src="Bootstraps/js/jquery-3.1.1.min.js"></script>
 
@@ -198,8 +178,6 @@ $("#view_comment").click(function (){
 	$(".all_comment").toggle();
 	// $(this).html(' Hide Comment');
 });
-
-
 
 $(".topic_content").on('click', function() {
 	var result = $(this).text();
